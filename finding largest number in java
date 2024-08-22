@@ -1,0 +1,31 @@
+import java.util.Random;
+
+public class LargestNumber {
+
+    public static void main(String[] args) {
+        int[] numbers = fillArray(10); // Fill an array with 10 random numbers
+        int largest = findLargest(numbers);
+        System.out.println("Largest Number: " + largest);
+    }
+
+    public static int[] fillArray(int size) {
+        Random random = new Random();
+        int[] numbers = new int[size];
+        
+        for (int i = 0; i < size; i++) {
+            numbers[i] = random.nextInt(100); // Random number between 0 and 99
+        }
+        
+        return numbers;
+    }
+
+    public static int findLargest(int[] numbers) {
+        int largest = numbers[0];
+        for (int num : numbers) {
+            if (num > largest) {
+                largest = num;
+            }
+        }
+        return largest;
+    }
+}
