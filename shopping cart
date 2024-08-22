@@ -1,0 +1,63 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class ShoppingCart {
+
+    public static void main(String[] args) {
+        List<Double> cart = new ArrayList<>();
+        populateCart(cart);
+        
+        removeProduct(cart, 2); // Simulate removing a product
+        
+        double totalPrice = calculateTotalPrice(cart);
+        System.out.println("Total Price: " + totalPrice);
+
+        double mostExpensive = findMostExpensive(cart);
+        double leastExpensive = findLeastExpensive(cart);
+        System.out.println("Most Expensive Item: " + mostExpensive);
+        System.out.println("Least Expensive Item: " + leastExpensive);
+    }
+
+    public static void populateCart(List<Double> cart) {
+        Random random = new Random();
+        for (int i = 0; i < 10; i++) {
+            cart.add(random.nextDouble() * 100); // Random price between 0 and 100
+        }
+    }
+
+    public static void removeProduct(List<Double> cart, int index) {
+        if (index >= 0 && index < cart.size()) {
+            cart.set(index, 0.0); // Simulate removing a product by setting its price to 0
+        }
+    }
+
+    public static double calculateTotalPrice(List<Double> cart) {
+        double total = 0;
+        for (double price : cart) {
+            total += price;
+        }
+        return total;
+    }
+
+    public static double findMostExpensive(List<Double> cart) {
+        double mostExpensive = Double.MIN_VALUE;
+        for (double price : cart) {
+            if (price > mostExpensive) {
+                mostExpensive = price;
+            }
+        }
+        return mostExpensive;
+    }
+
+    public static double findLeastExpensive(List<Double> cart) {
+        double leastExpensive = Double.MAX_VALUE;
+        for (double price : cart) {
+            if (price > 0 && price < leastExpensive) {
+                leastExpensive = price;
+            }
+        }
+        return leastExpensive;
+    }
+}
+
