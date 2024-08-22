@@ -1,0 +1,63 @@
+import java.util.Arrays;
+import java.util.Random;
+
+public class ClassGrades {
+
+    public static void main(String[] args) {
+        int[] grades = new int[30];
+        populateGrades(grades);
+        
+        double average = calculateAverage(grades);
+        System.out.println("Average Grade: " + average);
+
+        int highest = findHighest(grades);
+        int lowest = findLowest(grades);
+        System.out.println("Highest Grade: " + highest);
+        System.out.println("Lowest Grade: " + lowest);
+
+        printTopFiveScores(grades);
+    }
+
+    public static void populateGrades(int[] grades) {
+        Random random = new Random();
+        for (int i = 0; i < grades.length; i++) {
+            grades[i] = random.nextInt(101); // Random grade between 0 and 100
+        }
+    }
+
+    public static double calculateAverage(int[] grades) {
+        int sum = 0;
+        for (int grade : grades) {
+            sum += grade;
+        }
+        return (double) sum / grades.length;
+    }
+
+    public static int findHighest(int[] grades) {
+        int highest = grades[0];
+        for (int grade : grades) {
+            if (grade > highest) {
+                highest = grade;
+            }
+        }
+        return highest;
+    }
+
+    public static int findLowest(int[] grades) {
+        int lowest = grades[0];
+        for (int grade : grades) {
+            if (grade < lowest) {
+                lowest = grade;
+            }
+        }
+        return lowest;
+    }
+    public static void printTopFiveScores(int[] grades) {
+        Arrays.sort(grades);
+        System.out.println("Top 5 Scores:");
+        for (int i = grades.length - 1; i >= grades.length - 5; i--) {
+            System.out.println(grades[i]);
+        }
+    }
+}
+
