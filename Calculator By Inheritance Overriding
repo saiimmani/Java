@@ -1,0 +1,51 @@
+class Calculator {
+    double calculate(double a, double b) {
+        return a + b;
+    }
+}
+
+class SubtractionCalculator extends Calculator {
+    @Override
+    double calculate(double a, double b) {
+        return a - b;
+    }
+}
+
+class MultiplicationCalculator extends Calculator {
+    @Override
+    double calculate(double a, double b) {
+        return a * b;
+    }
+}
+
+class DivisionCalculator extends Calculator {
+    @Override
+    double calculate(double a, double b) {
+        if (b != 0) {
+            return a / b;
+        } else {
+            throw new IllegalArgumentException("Division by zero");
+        }
+    }
+}
+
+public class ca2 {
+    public static void main(String[] args) {
+        Calculator additionCalc = new Calculator();
+        Calculator subtractionCalc = new SubtractionCalculator();
+        Calculator multiplicationCalc = new MultiplicationCalculator();
+        Calculator divisionCalc = new DivisionCalculator();
+
+        // Testing addition
+        System.out.println("10 + 5 = " + additionCalc.calculate(10, 5));
+
+        // Testing subtraction
+        System.out.println("10 - 5 = " + subtractionCalc.calculate(10, 5));
+
+        // Testing multiplication
+        System.out.println("10 * 5 = " + multiplicationCalc.calculate(10, 5));
+
+        // Testing division
+        System.out.println("10 / 5 = " + divisionCalc.calculate(10, 5));
+    }
+}
