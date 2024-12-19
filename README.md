@@ -18,7 +18,10 @@ This repository contains solutions and examples for advanced programming topics 
    - Examples of using components like `JFrame`, `JButton`, and `JTextField`.
 4. **Encapsulation**:
    - Examples that show data hiding using private variables and public methods.
-5. **Polymorphism**:
-   -polymorphism is considered one of the important features of Object-Oriented Programming. Polymorphism allows us to perform a single action in different ways. In other words, polymorphism allows you to define one interface and have multiple implementations. The word “poly” means many and “morphs” means forms, So it means many forms.
-   - run time and compile time polymorphism
+5. **Polymorphism**:<br>
+    - polymorphism is considered one of the important features of Object-Oriented Programming. Polymorphism allows us to perform a single action in different ways. In 
+     other words, polymorphism allows you to define one interface and have multiple implementations. The word “poly” means many and “morphs” means forms, So it means 
+     many forms.
+   - run time and compile time polymorphism <br>  
+   
 **Happy Coding! 🚀**
