@@ -23,5 +23,4 @@ This repository contains solutions and examples for advanced programming topics 
      other words, polymorphism allows you to define one interface and have multiple implementations. The word “poly” means many and “morphs” means forms, So it means 
      many forms.
    - run time and compile time polymorphism <br>  
-   
-**Happy Coding! **
+
