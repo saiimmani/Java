@@ -24,4 +24,4 @@ This repository contains solutions and examples for advanced programming topics 
      many forms.
    - run time and compile time polymorphism <br>  
    
-**Happy Coding! 🚀**
+**Happy Coding! **
